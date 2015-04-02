@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Learning Initiative</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<h1>Open Learning Initiative - <%- school %></h1>
+  	<h2>Courses:</h2>
+  	<ul>
+    <% for(itemIdx in items){ item = items[itemIdx]; if (item === "") continue; %>
+    <li>	<a href='/course/<%- item._id%>'><%- item['short-desc'] %></a></li>
+    <% } %>
+</ul>
+  </body>
+</html>
